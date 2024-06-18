@@ -20,7 +20,7 @@ class MySG(StatesGroup):
 
 main_window = Window(
     Const("Hello, unknown person"),
-    Button(Const("Useless button"), id="nothing", on_click=handlers.start_page),
+    Button(Const("open web"), id="nothing", web_app=WebAppInfo(url="https://github.com/SwEEtL0Li/test/blob/master/test.html")),
     state=MySG.main,
 )
 dialog = Dialog(main_window)
@@ -30,6 +30,8 @@ bot = Bot(token='6525353343:AAHW8JVm3wya_x52NdUXM5lAuBqZX-afgL8')
 dp = Dispatcher(storage=storage)
 dp.include_router(dialog)
 setup_dialogs(dp)
+
+
 
 @dp.message(Command("start"))
 async def start(message: Message, dialog_manager: DialogManager):
