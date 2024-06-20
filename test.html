@@ -1,46 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <script src="https://telegram.org/js/telegram-web-app.js"></script>
-    <meta charset="UTF-8">
-    <meta name ="viewport"
-    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Title</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style.css">
+	<title>Document</title>
 </head>
 <body>
-    <div>
+	<div class="container">
+		<div class="inner">
+			<div class="item">
+				<img src="1.png" alt="" class="img">
+				<button class="btn" id="btn1">Add</button>
+			</div>
+			<div class="item">
+				<img src="1.png" alt="" class="img">
+				<button class="btn" id="btn2">Add</button>
+			</div>
+			<div class="item">
+				<img src="1.png" alt="" class="img">
+				<button class="btn" id="btn3">Add</button>
+			</div>
+			<div class="item">
+				<img src="1.png" alt="" class="img">
+				<button class="btn" id="btn4">Add</button>
+			</div>
+			<div class="item">
+				<img src="1.png" alt="" class="img">
+				<button class="btn" id="btn5">Add</button>
+			</div>
+			<div class="item">
+				<img src="1.png" alt="" class="img">
+				<button class="btn" id="btn6">Add</button>
+			</div>
+		</div>
+	</div>
+	<div class="usercard" id="usercard">
 
-    </div>
-</body>
-</html><!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Telegram Web App</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-        }
-        .container {
-            margin: 50px;
-            text-align: center;
-        }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <h1>Welcome to the Telegram Web App</h1>
-        <button onclick="sendMessage()">Send Message to Bot</button>
-    </div>
+	</div>
 
-    <script>
-        function sendMessage() {
-            Telegram.WebApp.sendData("Hello from web app!");
-        }
-
-        Telegram.WebApp.ready();
-    </script>
+	<script src="https://telegram.org/js/telegram-web-app.js"></script>
+	<script src="app.js"></script>
 </body>
 </html>
