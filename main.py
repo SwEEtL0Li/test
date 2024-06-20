@@ -9,7 +9,7 @@ dp = Dispatcher(bot)
 @dp.message_handler(commands=['start'])
 async def start(message: types.Message):
     markup = types.InlineKeyboardMarkup()
-    markup.add(types.InlineKeyboardButton('Web App', web_app=WebAppInfo(url="https://2ch.hk/")))
+    markup.add(types.InlineKeyboardButton('Web App', web_app=WebAppInfo(url="https://github.com/SwEEtL0Li/test/test.html")))
     await message.reply("Hello!", reply_markup=markup)
 
 executor.start_polling(dp)
