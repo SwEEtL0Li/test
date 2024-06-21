@@ -13,7 +13,7 @@ body {
 .inner {
 	display: grid;
 	grid-template-columns: 1fr;
-	grid-template-rows: repeat(6, 50px);
+	grid-template-rows: repeat(6, 60px);
 }
 
 .img {
@@ -26,9 +26,9 @@ body {
 
 .btn {
 	display: inline-block;
-	padding: 10px 20px;
+	padding: 20px 40px;
 	border: none;
-	background: rgb(248, 168, 24);
+	background: rgb(248, 211, 24);
 	border-radius: 10px;
 	color: #fff;
 	text-transform: uppercase;
