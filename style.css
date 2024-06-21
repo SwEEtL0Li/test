@@ -7,13 +7,13 @@ body {
 }
 
 .container {
-	max-width: 200px;
+	max-width: 390px;
 }
 
 .inner {
 	display: grid;
 	grid-template-columns: 1fr;
-	grid-template-rows: repeat(6, 80px);
+	grid-template-rows: repeat(6, 50px);
 }
 
 .img {
