@@ -13,7 +13,7 @@ body {
 .inner {
 	display: grid;
 	grid-template-columns: 1fr;
-	grid-template-rows: repeat(6, 60px);
+	grid-template-rows: repeat(6, 80px);
 }
 
 .img {
@@ -26,10 +26,10 @@ body {
 
 .btn {
 	display: inline-block;
-	padding: 20px 40px;
+	padding: 20px 80px;
 	border: none;
 	background: rgb(248, 211, 24);
-	border-radius: 10px;
+	border-radius: 15px;
 	color: #fff;
 	text-transform: uppercase;
 	font-weight: 700;
