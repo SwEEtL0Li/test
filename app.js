@@ -14,7 +14,7 @@ let btn4 = document.getElementById("btn4");
 let btn5 = document.getElementById("btn5");
 
 
-btn1.addEventListener("click", function(){
+document.getElementById("btn1").addEventListener("click", function(){
 	document.getElementById("home").style.display = "none";
     document.getElementById("page1").style.display = "block";
 });
