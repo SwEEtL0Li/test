@@ -24,6 +24,10 @@ body {
 	text-align: center;
 }
 
+.hidden {
+    display: none;
+}
+
 .btn {
 	display: inline-block;
 	padding: 20px 80px;
@@ -36,6 +40,17 @@ body {
 
 	transition: background .2s linear;
 }
+.btn1 {
+    display: inline-block;
+    padding: 10px 20px;
+    border: none;
+    background: rgb(248, 168, 24);
+    border-radius: 10px;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-top: 10px;
+    transition: background .2s linear;
 
 .btn:hover {
 	background: lightgreen;

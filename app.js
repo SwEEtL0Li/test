@@ -14,54 +14,15 @@ let btn4 = document.getElementById("btn4");
 let btn5 = document.getElementById("btn5");
 
 
-document.getElementById("btn1").addEventListener("click", function(){
+document.getElementById("btn2").addEventListener("click", function(){
 	document.getElementById("home").style.display = "none";
     document.getElementById("page1").style.display = "block";
 });
-
-btn2.addEventListener("click", function(){
-	if (tg.MainButton.isVisible) {
-		tg.MainButton.hide();
-	}
-	else {
-		tg.MainButton.setText("В разработке!");
-		item = "2";
-		tg.MainButton.show();
-	}
+document.getElementById("back1").addEventListener("click", function(){
+    document.getElementById("page1").style.display = "none";
+    document.getElementById("home").style.display = "block";
 });
 
-btn3.addEventListener("click", function(){
-	if (tg.MainButton.isVisible) {
-		tg.MainButton.hide();
-	}
-	else {
-		tg.MainButton.setText("В разработке!");
-		item = "3";
-		tg.MainButton.show();
-	}
-});
-
-btn4.addEventListener("click", function(){
-	if (tg.MainButton.isVisible) {
-		tg.MainButton.hide();
-	}
-	else {
-		tg.MainButton.setText("В разработке!");
-		item = "4";
-		tg.MainButton.show();
-	}
-});
-
-btn5.addEventListener("click", function(){
-	if (tg.MainButton.isVisible) {
-		tg.MainButton.hide();
-	}
-	else {
-		tg.MainButton.setText("В разработке!");
-		item = "5";
-		tg.MainButton.show();
-	}
-});
 
 Telegram.WebApp.onEvent("mainButtonClicked", function(){
 	tg.sendData(item);
@@ -76,3 +37,20 @@ p.innerText = `${tg.initDataUnsafe.user.first_name}
 ${tg.initDataUnsafe.user.last_name}`;
 
 usercard.appendChild(p);
+
+
+async function fetchData() {
+    try {
+        const response = await fetch('http://localhost:3000/data');
+        const data = await response.json();
+        document.getElementById('sensorValue').innerText = `Показание датчика: ${data.value.toFixed(2)}`;
+    } catch (error) {
+        console.error('Error fetching data:', error);
+    }
+}
+
+// Получение данных каждые 5 секунд
+setInterval(fetchData, 5000);
+
+// Начальная загрузка данных
+fetchData();
